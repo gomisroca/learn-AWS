@@ -28,3 +28,22 @@
 We can extend the k8s API with **Custom Resources** to add additional functionality to the cluster. They are created with a Custom Resource Definition (CRD). They can be controlled with custom controllers, which run in pods on the worker nodes. When used to automate the management of custom resources, they are called **Operators**.
 
 We can communicate with the control plane using the **kubectl** cli.
+
+## 🎮 EKS Control Plane
+
+- EKS manages the k8s control plane.
+- In standard k8s we are responsible for designing, implementing and maintaining all components of the control plane.
+- EKS automatically manages the availability and scalability of the k8s API servers and etcd persistence layer for each cluster.
+
+Getting Started with EKS:
+
+- EKS control panel consists of 2 API servers nodes and 3 etcd nodes across 3 availability zones.
+- EKS auto detects and replaces unhealthy control plane nodes.
+- First, we provision the cluster of worker nodes. Then, EKS will provision the control plane nodes.
+- We connect to the control plane nodes using cli or gui. Then, we can deploy applications to the cluster just like in any other k8s cluster.
+- EKS has 2 CLIs: Amazon EKS CLI and eksctl.
+
+What API are we using?
+
+- We use EKS API for anything EKS manages. i.e Control panel (creating and managing cluster)
+- We use k8s API for k8s objects such as pods, deployments, services, etc.
