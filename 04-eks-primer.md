@@ -47,3 +47,11 @@ What API are we using?
 
 - We use EKS API for anything EKS manages. i.e Control panel (creating and managing cluster)
 - We use k8s API for k8s objects such as pods, deployments, services, etc.
+
+## 📊 EKS Data Plane
+
+- EKS can manage some of all of the data plane.
+- There's three degrees of control over the data plane:
+  - Self-managed: EKS only manages the control plane.
+  - Managed Node Groups: EKS manages the node groups and EC2 instances within them.
+  - AWS Fargate: EKS fully manages the data plane.
