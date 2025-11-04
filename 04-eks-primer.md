@@ -55,3 +55,26 @@ What API are we using?
   - Self-managed: EKS only manages the control plane.
   - Managed Node Groups: EKS manages the node groups and EC2 instances within them.
   - AWS Fargate: EKS fully manages the data plane.
+
+# ⚙️ Configuring AWS EKS
+
+## 🍳 Preparing the AWS Environment
+
+- When creating an EKS cluster we need to perform 3 tasks:
+  - Secure the AWS environment
+  - Configure the virtual private cloud (VPC) for the cluster
+  - Create the EKS cluster
+- AWS handles EKS control plane:
+  - K8s control-plane nodes and services
+  - etcd
+- We as users handle EKS data plane:
+  - IAM
+  - Image, Pod, Runtime and Network Security
+- Three permission types:
+  - Cluster IAM Role: Allows EKS to make calls to AWS APIs for the cluster on our behalf.
+  - Node IAM Role: Allows EKS to make calls to AWS APIs for the node on our behalf.
+  - RBAC User: Admin user for the cluster.
+- Three networking configurations:
+  - Only Public Subnets: All workers have a public IP address and can send/receive traffic via a gateway.
+  - Only Private Subnets: Nodes may send/receive traffic only via a NAT gateway.
+  - Public and Private Subnets: Nodes may send/receive traffic via NAT or to the internet.
