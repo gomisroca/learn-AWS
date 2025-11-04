@@ -78,3 +78,30 @@ What API are we using?
   - Only Public Subnets: All workers have a public IP address and can send/receive traffic via a gateway.
   - Only Private Subnets: Nodes may send/receive traffic only via a NAT gateway.
   - Public and Private Subnets: Nodes may send/receive traffic via NAT or to the internet.
+
+## 🎨 Creating a Cluster
+
+- AWS CLI, kubectl, eksctl required.
+
+Using **eksctl**:
+
+- `eksctl create cluster -f ./config.yaml` to create the cluster.
+- We can add arguments to the command or create a config file:
+
+```yaml
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: eks-cluster
+  region: us-west-2
+vpc:
+  subnets:
+    private:
+      us-east-1b: { id: subnet-0a1d2c3d }
+      us-east-1c: { id: subnet-0a1d2c3d }
+nodeGroups:
+  - name: ClusterTwoNodes
+    instanceType: t3.medium
+    desiredCapacity: 2
+    privateNetworking: true
+```
