@@ -126,3 +126,15 @@ nodeGroups:
 - We can manage storage with Elastic Block Store (EBS) and Elastic File System (EFS).
 - For data persistence, we will need a PV and PVC and a CSI (Container Storage Interface) driver. EBS and EFS have specific CSI drivers.
   - The CSI makes AWS API calls to the AWS storage in behalf of the storage class object.
+
+## 🚀 Deploying Applications to Amazon EKS
+
+- kubectl is not ideal for production due to poor scalability and high admin overhead.
+- CI/CD is the best way to deploy applications to EKS.
+  1. AWS CodeCommit repo gets a commit.
+  2. AWS CodeBuild builds an image based on the commit.
+  3. The image is pushed to AWS ECR.
+  4. CodePipeline invokes a Lambda function to prepare the deployment.
+  5. Lambda invokes the k8s API to deploy/update the application.
+  6. K8s deploys the application.
+- We can use self-managed CI/CD tools such as Jenkins, Helm, etc.
