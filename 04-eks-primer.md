@@ -138,3 +138,9 @@ nodeGroups:
   5. Lambda invokes the k8s API to deploy/update the application.
   6. K8s deploys the application.
 - We can use self-managed CI/CD tools such as Jenkins, Helm, etc.
+
+## 🔭 Gaining Observability
+
+- Metrics, Logs and Traces are the 3 main sources of observability.
+- There are many tools to ingest this data. Grafana, Prometheus, CloudWatch, etc.
+- AWS offers managed versions of these tools.
