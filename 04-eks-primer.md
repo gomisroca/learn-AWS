@@ -112,3 +112,9 @@ nodeGroups:
 - Vertical Scaling: increase performance by adding more resources, such as CPU, memory, or storage.
 - The k8s Cluster Autoscaler automatically scales the number of nodes in the cluster. Karpenter is an alternative to the Cluster Autoscaler.
 - There is Horizontal Autoscaler and Vertical Autoscaler.
+
+## 📞 Managing Communication in Amazon EKS
+
+- EKS integrates VPC networking into k8s via the AWS VPC CNI plugin.
+  - K8s pods will have the same IP address inside the pod as they do on the VPC network.
+- VPC can be seen as a virtual data center.
