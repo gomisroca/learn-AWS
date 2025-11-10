@@ -105,3 +105,10 @@ nodeGroups:
     desiredCapacity: 2
     privateNetworking: true
 ```
+
+## 🌅 Configuring Horizontal and Vertical Scaling
+
+- Horizontal Scaling: increase/decrease performance by adding/removing compute resources (such as pods).
+- Vertical Scaling: increase performance by adding more resources, such as CPU, memory, or storage.
+- The k8s Cluster Autoscaler automatically scales the number of nodes in the cluster. Karpenter is an alternative to the Cluster Autoscaler.
+- There is Horizontal Autoscaler and Vertical Autoscaler.
