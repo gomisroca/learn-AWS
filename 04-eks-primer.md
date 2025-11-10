@@ -144,3 +144,9 @@ nodeGroups:
 - Metrics, Logs and Traces are the 3 main sources of observability.
 - There are many tools to ingest this data. Grafana, Prometheus, CloudWatch, etc.
 - AWS offers managed versions of these tools.
+
+## 💬 Deploying a Service Mesh with AWS App Mesh
+
+- App Mesh provides app-level networking to help services communicate with each other.
+- It connects microservices in a secure network using encryption and authentication controls.
+- Provides end-to-end visibility in application performance.
