@@ -118,3 +118,11 @@ nodeGroups:
 - EKS integrates VPC networking into k8s via the AWS VPC CNI plugin.
   - K8s pods will have the same IP address inside the pod as they do on the VPC network.
 - VPC can be seen as a virtual data center.
+
+# 🕸️ Integrating Amazon EKS with Other Services
+
+## 🫙 Managing Storage in Amazon EKS
+
+- We can manage storage with Elastic Block Store (EBS) and Elastic File System (EFS).
+- For data persistence, we will need a PV and PVC and a CSI (Container Storage Interface) driver. EBS and EFS have specific CSI drivers.
+  - The CSI makes AWS API calls to the AWS storage in behalf of the storage class object.
