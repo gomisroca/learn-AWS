@@ -18,3 +18,12 @@
 - Instead of organizing repos by function, we can organize them by service. A service can have multiple Lambda functions.
 - Should provide AWS sandbox environments to test code, either per-developer or shared.
 - Keep production and non-production environments in separate accounts.
+
+## 🐛 Testing and Debugging Serverless Applications
+
+- Serverless testing spans local unit tests, remote integration tests, and automated pipeline tests that act as gates for production.
+- Strong local testing relies on isolating business logic so you can unit test without the full Lambda runtime, using mocks, emulators like DynamoDB Local/LocalStack, or even real cloud services.
+- Mocking can range from lightweight local emulators to complex custom frameworks, but many teams simply test against real AWS services.
+- Can't attach a remote debugger directly to Lambda because AWS blocks inbound debugging ports, making traditional remote debugging impossible.
+- SAM solves this by running the Lambda function in a Docker container.
+- Code changes are automatically deployed to the local SAM environment.
