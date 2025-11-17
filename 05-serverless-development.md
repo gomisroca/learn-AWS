@@ -15,3 +15,6 @@
 - During serverless development, we need to manage multiple lambda functions and resources.
 - Can use frameworks like AWS SAM to simplify the building, packaging, configuring, and deploying of serverless applications.
 - SAM and similar frameworks provides CLI tools to automate packaging and deployment.
+- Instead of organizing repos by function, we can organize them by service. A service can have multiple Lambda functions.
+- Should provide AWS sandbox environments to test code, either per-developer or shared.
+- Keep production and non-production environments in separate accounts.
