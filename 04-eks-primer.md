@@ -169,3 +169,12 @@ nodeGroups:
 - If using self-managed nodes, we can upgrade via eksctl or kubectl.
 - If using managed nodes, we can upgrade via the AWS console or eksctl.
 - If using Fargate, it will be updated automatically.
+
+# 💰 Managing EKS Costs
+
+## 💸 Primary Cost Drivers in EKS
+
+- The control plane is the least expensive part of the cluster.
+- The computed resources (such as EC2 instances) are the most expensive part of the cluster.
+- We can manage compute costs by using AWS purchase options such as on-demand, saving plans or Spot instances.
+- Managed services reduce the costs.
