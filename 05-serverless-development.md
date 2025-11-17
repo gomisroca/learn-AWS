@@ -12,6 +12,6 @@
 
 ## 🤹 Managing Serverless Applications
 
-- Serverless development uses the same coding practices and tooling as traditional development, but adds the need for packaging and deploying multiple Lambda functions and resources.
-- Application frameworks like AWS SAM simplify the otherwise complex process of building, packaging, configuring, and deploying serverless applications, reducing large CloudFormation templates to a few lines.
-- SAM (and similar frameworks) provides CLI tools to automate packaging and deployment, making it easier to manage applications across environments.
+- During serverless development, we need to manage multiple lambda functions and resources.
+- Can use frameworks like AWS SAM to simplify the building, packaging, configuring, and deploying of serverless applications.
+- SAM and similar frameworks provides CLI tools to automate packaging and deployment.
