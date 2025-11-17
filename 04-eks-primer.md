@@ -150,3 +150,22 @@ nodeGroups:
 - App Mesh provides app-level networking to help services communicate with each other.
 - It connects microservices in a secure network using encryption and authentication controls.
 - Provides end-to-end visibility in application performance.
+
+# ⛑️ Maintaining the Amazon EKS Cluster
+
+## ➕ Maintaining Add-ons
+
+- Amazon EKS automatically installs 3 add-ons: Amazon VPC CNI, kube-proxy, and CoreDNS. Amazon ensures that these add-ons are always up-to-date.
+- Can install third-party add-ons. We have to ensure they work with our cluster.
+
+## 🧣 Managing Upgrades
+
+- New k8s versions can have varying degrees of breaking changes.
+- EKS upgrade process:
+  1. EKS launches new API server nodes with the new version.
+  2. If anything fails, EKS will roll back to the previous version.
+  3. There might be minor downtime if the subnets are busy.
+  4. The user has to manually update the worker nodes, add-ons and running apps.
+- If using self-managed nodes, we can upgrade via eksctl or kubectl.
+- If using managed nodes, we can upgrade via the AWS console or eksctl.
+- If using Fargate, it will be updated automatically.
