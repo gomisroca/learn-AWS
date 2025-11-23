@@ -28,3 +28,9 @@
 
 - We can often parallelize our tasks to reduce the time it takes to complete a task.
 - Due to the Lambda pricing, this parallelization is possible and cost effective.
+
+## 🪧 More Environments, More Innovation
+
+- In serverless, we usually can employ multiple environments much easier and cheaper.
+- We can create demo environments for feature branches.
+- Each dev can have their own environment.
