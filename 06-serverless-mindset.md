@@ -17,3 +17,9 @@
   - Flexible scaling.
   - Automated high availability.
   - No idle costs.
+
+## 🐕‍🦺 Managed Services Connected by Functions
+
+- There are many more managed services that deal with serverless besides Lambda.
+- We can use these services as Lambda event sources.
+- Each lambda function should be independent and focused on a single task.
