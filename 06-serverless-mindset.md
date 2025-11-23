@@ -23,3 +23,8 @@
 - There are many more managed services that deal with serverless besides Lambda.
 - We can use these services as Lambda event sources.
 - Each lambda function should be independent and focused on a single task.
+
+## ⏰ From Hours to Minutes with Parallelization
+
+- We can often parallelize our tasks to reduce the time it takes to complete a task.
+- Due to the Lambda pricing, this parallelization is possible and cost effective.
