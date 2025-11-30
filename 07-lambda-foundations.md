@@ -15,3 +15,18 @@
   - Availability and fault tolerance built-in.
 - Event-driven architecture uses observable events to initiate actions and communication between different services.
 - The architecture consists of Event Producers (app, website, etc.), Event Routers (ingests events and directs it to the appropriate consumers), and Event Consumers (database, financial system, customer service, etc.).
+
+## How AWS Lambda Works
+
+- Event sources can invoke Lambda functions in three general patterns:
+  - Synchronous invocation: Lambda runs the fn and waits for a response. An immediate response is expected. Errors: no retries.
+  - Asynchronous invocation: Events are queued and a response is not waited on. Errors: retries twice.
+  - Polling invocation: Designed to integrate with other AWS services. AWS will manage the polling and perform synchronous invocations. Errors: depends on source.
+- Lambda functions are invoked in an isolated and secure execution environment. This environment manages resources and provides support for the fn's runtime.
+- It is best practice to minimize cold starts. That is, requiring a new environment to run the fn. This adds latency. We should use warm starts, where the environment is retained between invocations. There's also Provisioned Concurrency, a Lambda feature that prepares environments before a function is invoked.
+- To take advantage of warm starts:
+  1. Sore and reference dependencies locally.
+  2. Limit reinit of vars.
+  3. Add checks for existing connections.
+  4. Use tmp space as transient cache.
+  5. Check that background processes have completed.
