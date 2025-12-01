@@ -30,3 +30,19 @@
   3. Add checks for existing connections.
   4. Use tmp space as transient cache.
   5. Check that background processes have completed.
+
+## AWS Lambda Function Permissions
+
+- Need two types of permissions: permission to invoke the fn, and permission for the Lambda fn itself to act upon other AWS services.
+- Invoke permissions are controlled using IAM resource policies.
+  - Tells Lambda which principals (user, role, service) can invoke the fn.
+  - Can be seen and modified from the Lambda console.
+  - It has a principal size limits.
+- Function permissions are controlled using IAM execution roles.
+  - Role is provided when creating the function.
+  - The policy attached to the role determines what the function can do.
+  - It must include a trust police that allows Lambda to "AssumeRole".
+  - Can be written or use provided roles.
+  - Can edit permissions at any time.
+- Should follow the principle of least privilege.
+- If the Lambda fn needs access to a resource within a VPC, it needs VPC-specific information, such as VPC subnet IDs and security group IDs. The execution role will be "AWSLambdaVPCAccessExecutionRole".
