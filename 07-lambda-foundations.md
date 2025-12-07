@@ -69,3 +69,11 @@
   - Run performance tests to simulate peak load.
   - Test if the existing backend is able to handle the load.
   - Test the error handling.
+
+## Deploying and Testing Serverless Applications
+
+- The AWS CloudFormation template is the blueprint for the Lambda fn.
+- The infrastructure need is written to a text file, the template.
+- Need just the code and the CloudFormation template to serverlessly deploy the fn.
+- To test fn, we need to designate AWS accounts and test in the cloud.
+- AWS SAM streamlines serverless deployments.
