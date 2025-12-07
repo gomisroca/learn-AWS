@@ -58,3 +58,14 @@
   - The context obj allows the fn to interact with the execution environment.
 - It is best practice to separate business logic from the handler method.
 - Serverless applications should treat each function as stateless. No information should be stored in the function.
+
+## Configuring AWS Lambda Functions
+
+- Three primary config settings:
+  - Memory: Up to 10GB. More memory size = more CPU.
+  - Timeout: Max 900s. Billed on 1ms increments.
+  - Concurrency: If the fn is invoked while another request is in progress, another instance will be allocated. Limit concurrency to regulate costs, reserve concurrency to ensure the fn can handle peak load.
+- To test:
+  - Run performance tests to simulate peak load.
+  - Test if the existing backend is able to handle the load.
+  - Test the error handling.
