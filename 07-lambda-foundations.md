@@ -77,3 +77,9 @@
 - Need just the code and the CloudFormation template to serverlessly deploy the fn.
 - To test fn, we need to designate AWS accounts and test in the cloud.
 - AWS SAM streamlines serverless deployments.
+
+## Monitoring and Troubleshooting
+
+- Lambda automatically monitors the fn and reports to CloudWatch. It tracks number of requests, invocation duration and errors.
+- Lambda Insights is a serverless solution for monitoring and analyzing Lambda functions.
+- With AWS X-Ray we can visualize the components of our app and identify bottlenecks.
