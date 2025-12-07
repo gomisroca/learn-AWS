@@ -46,3 +46,15 @@
   - Can edit permissions at any time.
 - Should follow the principle of least privilege.
 - If the Lambda fn needs access to a resource within a VPC, it needs VPC-specific information, such as VPC subnet IDs and security group IDs. The execution role will be "AWSLambdaVPCAccessExecutionRole".
+
+## Authoring AWS Lambda Functions
+
+- Can be written in almost any language.
+- The handler fn is the entry point for the fn. When the fn is invoked, the handler fn is called.
+- The handlers takes an event object and a context object as parameters.
+  - The event obj is required.
+  - The event obj includes all the data to make the fn work.
+  - The context obj is optional.
+  - The context obj allows the fn to interact with the execution environment.
+- It is best practice to separate business logic from the handler method.
+- Serverless applications should treat each function as stateless. No information should be stored in the function.
