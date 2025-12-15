@@ -35,3 +35,21 @@
   - Edge-optimized: reduced client latency.
   - Private: only exposes API inside VPC.
 - We can cache the endpoint responses.
+
+## Building and Deploying APIs with API Gateway
+
+- When we deploy an API to a stage, a base URL is generated. That's the invoke URL.
+- Can add a custom domain as the host to make the URL more user-friendly.
+- Steps to build an API with API Gateway:
+  - Choose API type.
+  - Create API.
+  - Add resources.
+  - Configure resource as proxy.
+  - Create method.
+  - Edit method details.
+  - Test your API methods.
+- A stage is a snapshot of the API.
+- Best practices:
+  - Use stages with Lambda aliases.
+  - Use Canary deployments.
+  - Use AWS SAM to simplify deployment.
