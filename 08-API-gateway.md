@@ -26,3 +26,12 @@
   - Choose a route.
   - Choose the endpoint.
   - Configure how to transform the request data if necessary.
+
+## Designing REST APIs
+
+- A REST API in API Gateway is a collection of resources and methods integrated with backend endpoints, Lambda functions, or other AWS services.
+- We need to decide the type of endpoint:
+  - Regional: reduced latency within a region.
+  - Edge-optimized: reduced client latency.
+  - Private: only exposes API inside VPC.
+- We can cache the endpoint responses.
