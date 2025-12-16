@@ -53,3 +53,16 @@
   - Use stages with Lambda aliases.
   - Use Canary deployments.
   - Use AWS SAM to simplify deployment.
+
+## Managing API Access
+
+- API Gateway provides options for authorizing access to APIs, providing granular control, and controlling the amount of access through throttling.
+- Three ways to authorize access:
+  - IAM and Sig v4.
+    - Good for internal services or restricted number of users.
+  - Lambda Authorizers.
+    - Supports bearer token strategies such as OAuth.
+    - Can use API Gateway Lambda Authorizer blueprint for a quick start.
+    - Simply a Lambda fn that performs any custom authorization we write.
+  - Amazon Cognito with Cognito User Pools
+- IAM policies: `execute-api` to decide who can invoke the API. `apigateway` to decide who can manage the API.
