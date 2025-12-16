@@ -82,3 +82,12 @@
   - Execution logs: logs what's happening on the roundtrip of a request.
   - Access logs: logs who's invoking the API.
 - Can use X-Ray and CloudTrail to analyze use and performance.
+
+## Data Mapping and Request Validation
+
+- Mapping templates can be added to the integration request to transform the request data into the format expected by the backend.
+- Key variables:
+  - $input: Body, json, params, path
+  - $stageVariables: Variables defined in the stage.
+  - $util : escapeJavaScript(), parseJson(), urlEncode/Decode(), base64Encode/Decode().
+- For invalid requests, API Gateway will return an error response. Some of these error responses can be customized.
