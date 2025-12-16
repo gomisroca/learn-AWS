@@ -66,3 +66,19 @@
     - Simply a Lambda fn that performs any custom authorization we write.
   - Amazon Cognito with Cognito User Pools
 - IAM policies: `execute-api` to decide who can invoke the API. `apigateway` to decide who can manage the API.
+
+## Monitoring and Troubleshooting
+
+- Can use CloudWatch metrics to monitor API Gateway. It has 7 metrics by default:
+  - Count
+  - Latency
+  - IntegrationLatency
+  - 4xxError
+  - 5xxError
+  - CacheHitCount
+  - CacheMissCount
+- Latency and IntegrationLatency are particularly useful to calculate API Gateway overhead of deployed APIs.
+- Two types of CloudWatch logs:
+  - Execution logs: logs what's happening on the roundtrip of a request.
+  - Access logs: logs who's invoking the API.
+- Can use X-Ray and CloudTrail to analyze use and performance.
