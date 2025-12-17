@@ -41,3 +41,14 @@
 - DynamoDB is integrated with IAM to prevent unauthorized access.
 - DynamoDB Accelerator (DAX) is a caching service for DynamoDB.
 - DynamoDB has on-demand backup and restore.
+
+## Design Considerations
+
+- The Partition Key determines the distribution of data across the partition.
+- If we read/write to the same partition, it will become a "hot partition", while the others remain unused.
+- Avoid this by choosing the partition key wisely, and distributing read/write load across partitions.
+- Ideally, items should be small.
+- Seconday indexes should be used sparingly and thoughtfully.
+- Optimistic locking with a version number is a good way to avoid conflicts.
+- One-to-many Tables instead of large number of attributes.
+- Store frequently accessed small attributes in a separate table.
