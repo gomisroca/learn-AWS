@@ -29,3 +29,15 @@
 - With Secondary Indexes, we can direct Query and Scan to attributes that are not the primary key.
 - LSI are secondary indexes local to a partition key.
 - GSI are secondary indexes that span all partition keys in the base table.
+
+## Operating Amazon DynamoDB
+
+- Should build resilient client behavior:
+  - Handle 400/500 errors gracefully.
+  - Tune the built-in retry logic.
+  - Handle errors in batch operations.
+- Auto Scaling is enabled by default.
+- Global tables are managed, multi-region tables. Select the regions and done.
+- DynamoDB is integrated with IAM to prevent unauthorized access.
+- DynamoDB Accelerator (DAX) is a caching service for DynamoDB.
+- DynamoDB has on-demand backup and restore.
