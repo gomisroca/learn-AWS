@@ -52,3 +52,11 @@
 - Optimistic locking with a version number is a good way to avoid conflicts.
 - One-to-many Tables instead of large number of attributes.
 - Store frequently accessed small attributes in a separate table.
+
+## Serverless Architecture Patterns
+
+- AWS Serverless Platform Advantages:
+  - No server management.
+  - Flexible scaling.
+  - High availability.
+  - No idle capacity.
