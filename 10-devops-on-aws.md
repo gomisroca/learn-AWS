@@ -28,3 +28,13 @@
 - Faster time to recover.
 - Improved collaboration.
 - Automatically enforced rules and controls for security.
+
+## DevOps Culture
+
+- Create highly collaborative environment: DevOps breaks down silos and aligns goals for the whole team.
+- Automate when possible: repeatable tasks are automated.
+- Focus on costumer needs: with microservices, it is easier to switch directions and focus on customer needs.
+- Develop small and release often: no monolithic applications.
+- Include security at every phase: security must be iterative, incremental and automated.
+- Continuously experiment and learn: innovation and learning are encouraged by DevOps.
+- Continuously improve: Thoughtful metrics help teams monitor their progress.
