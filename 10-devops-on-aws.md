@@ -19,3 +19,12 @@
   - Developed and deployed as a single unit. Changes are difficult to manage.
   - Tightly coupled functionality. If too large, it becomes difficult to maintain.
   - Single development stack. Changing technlogies is difficult and costly.
+
+## Why DevOps?
+
+- Faster from commit to deploy.
+- More frequent deployments.
+- Lower change failure rate.
+- Faster time to recover.
+- Improved collaboration.
+- Automatically enforced rules and controls for security.
