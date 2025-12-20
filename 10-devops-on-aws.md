@@ -38,3 +38,12 @@
 - Include security at every phase: security must be iterative, incremental and automated.
 - Continuously experiment and learn: innovation and learning are encouraged by DevOps.
 - Continuously improve: Thoughtful metrics help teams monitor their progress.
+
+## DevOps Practices
+
+- Communication and Collaboration: set strong norms around transparency of information and communication.
+- Monitoring and Observability: assess how effective changes are nad how they impact performance and user experience.
+- CI: devs regularly merge their code into a central repository, where automated tests are run. Teams can resolve conflicts early.
+- CD: every code change is automatically built, tested and deployed to a staging environment.
+- Microservice Architecture: teams develop small, independent services that can be deployed independently.
+- Infrastructure as Code: infrastructure is provisioned and managed using code and software development techniques, such as version control and continuous integration.
