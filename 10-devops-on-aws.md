@@ -47,3 +47,12 @@
 - CD: every code change is automatically built, tested and deployed to a staging environment.
 - Microservice Architecture: teams develop small, independent services that can be deployed independently.
 - Infrastructure as Code: infrastructure is provisioned and managed using code and software development techniques, such as version control and continuous integration.
+
+## DevOps Tools
+
+- Cloud: cloud computing provides an array of technologies to support development.
+- Development: IDEs help write, run and debug code. SDKs allows devs to develop for a specific platform.
+- CI/CD: tools that bring seamless continuity in all dev phases and automate the integration of code changes.
+- Infrastructure Automation: define the infrastructure, including constraints, to repeatedly and consistently provision our environments.
+- Containers and Serverless: containers package code, serverless services allow us to build and run code without managing servers.
+- Monitoring and Observability: help prevent issues before they occur. We can collect metrics and performance data.
